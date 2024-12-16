@@ -17,7 +17,7 @@ public class BinarySearchOptimized {
         }
 
         // Perform binary search
-        int index = binary(arr, target, sort);
+        int index = binary(arr, target, sort);  
         System.out.println("The index value of target " + target + " is: " + index);
     }
 
