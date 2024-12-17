@@ -3,10 +3,10 @@ import java.util.ArrayList;
 public class Searchinduplicates {
     public static void main(String[] args) {
         // Initialize the array with some values
-        int arr[] = {223, 33, 11, 223344, 55667, 88, 66, 11};
+        int arr[] = {1,2,2,3,4,6,7,8,8};
         
         // Define the target value to search for
-        int target = 200;
+        int target = 2;
         
         // Call the linear search method and print the result
         System.out.println(linear(arr, target));

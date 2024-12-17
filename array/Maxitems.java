@@ -1,4 +1,3 @@
-package array;
 
 public class Maxitems {
     public static void main(String[] args) {
