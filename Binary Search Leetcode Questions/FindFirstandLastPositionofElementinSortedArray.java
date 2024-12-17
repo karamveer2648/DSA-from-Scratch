@@ -13,6 +13,7 @@ public class FindFirstandLastPositionofElementinSortedArray {
 
     int binarySearchDouble(int [] nums, int target, boolean findstart)
     {
+        int ans = -1;
         int start = 0;
         int end = nums.length - 1;
 
@@ -26,10 +27,17 @@ public class FindFirstandLastPositionofElementinSortedArray {
             } else if (target > nums[mid]) {
                 start = mid + 1;
             } else {
-                // ans found
-                return mid;
+                    ans = mid;
+            if(findstart){
+                end = mid-1;
+            }else{
+             start = mid + 1;   
+            }
+            }
+
+                
             }
         }
-        return -1;
+        return ans;
     }
 }
