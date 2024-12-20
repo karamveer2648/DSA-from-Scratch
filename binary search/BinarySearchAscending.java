@@ -14,24 +14,24 @@ public class BinarySearchAscending {
         int end = arr.length - 1;
 
         // Loop until the start index is less than or equal to the end index
-        while (start <= end) {
-            // Calculate the middle index
-            int mid = start + (end - start) / 2;
+            while (start <= end) {
+                // Calculate the middle index
+                int mid = start + (end - start) / 2;
 
-            // Check if the target is greater than the middle element
-            if (target > arr[mid]) {
-                start = mid + 1;
+                // Check if the target is greater than the middle element
+                if (target > arr[mid]) {
+                    start = mid + 1;
+                }
+                // Check if the target is less than the middle element
+                else if (target < arr[mid]) {
+                    end = mid - 1;
+                }
+                // Target is equal to the middle element
+                else {
+                    return mid;
+                }
             }
-            // Check if the target is less than the middle element
-            else if (target < arr[mid]) {
-                end = mid - 1;
-            }
-            // Target is equal to the middle element
-            else {
-                return mid;
-            }
+            // Target not found in the array
+            return -1;
         }
-        // Target not found in the array
-        return -1;
-    }
 }
